@@ -1,0 +1,127 @@
+@use "variables" as *;
+@use "mixin" as *;
+@use "hamburger" as *;
+@use "placeholder" as *;
+
+header{
+    border-bottom: $border;
+    margin:0 2rem 2rem 2rem;
+    nav {
+        height: 100%;
+        background: white;
+        position: fixed;
+        top: 0;
+        right: -350px;
+        width: 350px;
+        transition: $easeTime $ease;
+        ul {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        } 
+          a {
+          display: block;
+          padding: 2rem;
+          color: black;
+          font-size: 1.8rem;
+          text-align: center;
+          text-decoration: none;
+        }
+      }
+      p{
+        font-size:$fontsize;
+        justify-content: end;
+    }
+    #siteLogo{
+        width:3rem;
+        margin-top:2rem;
+    }
+    h1{
+        font-size: 2rem ;
+    }
+    #nav-bar ul{
+        font-size: $fontsize;
+    }
+    
+    
+    #nav-icon1 {
+       @include hamburger;
+        span {
+            @include hamburgerSpan;
+          }
+          span:nth-child(1) {
+            top: 0px;
+          }
+          span:nth-child(2) {
+            top: 18px;
+          }
+          span:nth-child(3) {
+            top: 36px;
+          }
+    
+      }
+      
+      #nav-icon1.open{
+        span:nth-child(1) {
+            top: 18px;
+            @include rotate(135deg);
+          }
+          span:nth-child(2) {
+            opacity: 0;
+            left: -60px;
+          }
+          span:nth-child(3) {
+            top: 18px;
+            @include rotate(-135deg);
+          }
+      } 
+      
+      #nav-bar{
+        display: none;
+      }
+      #nav-bar.active {
+        right: 20px;
+        transition: $easeTime $ease;
+        display: block;
+    
+      }
+      nav ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+      a{
+        @extend %link;
+      }
+      li{
+        list-style:none;
+      }
+}
+@media (min-width:960px){
+  header{
+    border-bottom: 2px solid black;
+    margin:0 2rem 2rem 2rem;
+    display:flex;
+    justify-content: space-between;
+}
+  h1{
+      font-size: 3rem ;
+      margin:3rem;
+  }
+  #nav-bar ul{
+      font-size: 2rem;
+  }
+  header p{
+      font-size:2rem;
+      margin-top: 2.5rem;
+  }
+  #siteLogo{
+      margin-top: 1.5rem;
+  }
+  #nav-icon1{
+      margin-top:2.5rem;
+  }
+  
+}
+

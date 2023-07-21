@@ -1,0 +1,28 @@
+@use "mixin" as *;
+@use "variables" as *;
+@mixin hamburger {
+    width: 60px;
+    height: 45px;
+    position: relative;
+    padding: 5px;
+    @include rotate($deg:0);
+    @include ease($time:0.5s);
+    cursor: $cursor;
+    z-index: 1000;
+}
+@mixin hamburgerSpan{
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 3.5rem;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    @include rotate($deg:0);
+    @include ease($time:0.25s);
+}
+%palceholder navSpan{
+    top: 18px;
+    @include rotate($deg:135);
+}

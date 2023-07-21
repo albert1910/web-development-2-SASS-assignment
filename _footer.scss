@@ -1,0 +1,17 @@
+@use "variables" as *;
+@use "mixin" as *;
+footer{
+    .footerPara {
+        font-style: none;
+        margin-left: 1rem;
+      }
+      #logo{
+        width:3rem;
+      }
+      a{
+        text-decoration: none;
+        &:visited{
+            color: black;
+        }
+      }
+}

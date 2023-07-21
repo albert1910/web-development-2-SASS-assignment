@@ -1,0 +1,15 @@
+@use "variables" as *;
+%link{
+    text-decoration: none;
+      &:visited{
+          color: black;
+      }
+}
+%load{
+    position: relative;
+    margin:0 auto;
+    box-shadow: $shadow;
+    width:fit-content;
+    font-size: 2rem;
+    padding:1rem 4rem;
+}

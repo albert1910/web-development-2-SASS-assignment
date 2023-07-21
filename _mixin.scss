@@ -1,0 +1,20 @@
+@use "variables" as *;
+@mixin ease ($time){
+    -webkit-transition: $time $ease;
+    -moz-transition:$time $ease;
+    -o-transition:$time $ease;
+    transition:$time $ease;
+}
+@mixin rotate ($deg){
+    -webkit-transform: rotate($deg);
+    -moz-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+@mixin grid($columns,$rows){
+    display:grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+}
+
