@@ -209,6 +209,9 @@ main .nav {
 main li {
   list-style: none;
 }
+main .gallery {
+  text-align: center;
+}
 @media (min-width: 950px) {
   main .feature {
     display: grid;

@@ -58,6 +58,9 @@ main{
     li{
         list-style:none;
     }
+    .gallery{
+        text-align: center;
+    }
     .loadMore{
         @extend %load;
        }
